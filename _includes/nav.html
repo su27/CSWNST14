@@ -2,29 +2,12 @@
 	<nav id="nav">
 		<ul>
 			{% assign current = page.url | downcase | split: '/' %}
-			<li {% if current[1] == 'index.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/index.html">Home</a></li>
-			<li>
-				<a href="">Dropdown</a>
-				<ul>
-					<li><a href="#">Lorem ipsum dolor</a></li>
-					<li><a href="#">Magna phasellus</a></li>
-					<li><a href="#">Etiam dolore nisl</a></li>
-					<li>
-						<a href="">Phasellus consequat</a>
-						<ul>
-							<li><a href="#">Lorem ipsum dolor</a></li>
-							<li><a href="#">Phasellus consequat</a></li>
-							<li><a href="#">Magna phasellus</a></li>
-							<li><a href="#">Etiam dolore nisl</a></li>
-							<li><a href="#">Veroeros feugiat</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Veroeros feugiat</a></li>
-				</ul>
-			</li>
-			<li {% if current[1] == 'blog' %}class='current'{% endif %}><a href="{{ site.baseurl }}/blog">Blog</a></li>
-			<li {% if current[1] == 'left-sidebar.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/left-sidebar.html">Left Sidebar</a></li>
-			<li {% if current[1] == 'right-sidebar.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/right-sidebar.html">Right Sidebar</a></li>
-			<li {% if current[1] == 'no-sidebar.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/no-sidebar.html">No Sidebar</a></li>
+      <li {% if current[1] == 'index.html' or page.url == '/' %}class='current'{% endif %}><a href="{{ site.baseurl }}/index.html">Home</a></li>
+      <li {% if current[1] == 'committees.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/committees.html">Committees</a></li>
+      <li {% if current[1] == 'program.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/program.html">Program</a></li>
+      <li {% if current[1] == 'submission.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/submission.html">Submission</a></li>
+      <li {% if current[1] == 'registration.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/registration.html">Registration</a></li>
+      <li {% if current[1] == 'venue.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/venue.html">Venue</a></li>
+      <li {% if current[1] == 'hotel.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/hotel.html">Hotel</a></li>
 		</ul>
 	</nav>
